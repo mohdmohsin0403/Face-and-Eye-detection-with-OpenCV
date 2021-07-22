@@ -21,8 +21,8 @@ Before adding face and eye detection on the Haar Cascade files we need to import
 ### To install OpenCV library on *anaconda prompt* execute the following commands:
 
 ```python
-                       pip install opencv-python
-                       pip install opencv-contrib-python
+pip install opencv-python
+pip install opencv-contrib-python
 ```
 
 ## REQUIREMENTS
@@ -34,10 +34,8 @@ Before adding face and eye detection on the Haar Cascade files we need to import
   - Python-OpenCV
 
 ### Code
-<html>
-<table>
- <tr>
-  <td>
+
+```python
    
 import cv2  
    
@@ -82,52 +80,66 @@ cap.release()
 cv2.destroyAllWindows()   
  
 
-</td>
-</tr>
-</table>
-</html>
-  
+```
+
+
  ##  Explanation
  
-   - Importing the Opencv library using the *import cv2* statement
-   - Loading the requirements of the XML classifiers for face and eye detection.
+   - Importing the Opencv library using the *import cv2* statement and then loading the requirements of the XML classifiers for the face and eye detection.
+
+```python
    
          face_cascade=cv2.CascadeClassifier('haarcascade_frontal_face_default.xml')
         
          eye_cascade=cv2.CascadeClassifier('haarcascade_eye_default.xml')
+         
+ ```
         
         
-        #### OR
+   #### OR
         
    -  Specifying the path where XML classifiers are stored:
         
         **Example:**
+        ```python
         
           face_cascade=cv2.CascadeClassifier('F:/is setup/haarcascade_frontal_face_default.xml')
           
           eye_cascade=cv2.CascadeClassifier('F:/is setup/haarcascade_eye.xml
           
+        ```
+          
+          
       -  Now initializing the cap variable and capturing the frames from the camera
+      ```python
     
           cap=cv2.VideoCapture(0)
+      ```    
           
  -  Using while loop read each frame from the camera and then perform the next step shown:
-                      
+     ```python
+          
               ret,img=cap.read()
+     ```    
               
   -  Converting it into gray scale frame.
   
+  ```python
               gray=cv2.cvtcolor(img,cv2.COLOR_BGR2GRAY)
               
-      
+   ```
+   
    -   Detecting the faces of different size in the input image
+   
+   ```python
    
             faces=face_cascade_detectMultiScale(gray,1.3,5)
     
-            
+   ```
+    
    -   Now our work is to draw a rectangle around the face and eye image using the for loop
    
-   
+   ```python
               for (x,y,w,h) in faces:
               
               cv2.rectangle(img(x,y),(x+w,y+h),(255,255,0),2)
@@ -141,16 +153,22 @@ cv2.destroyAllWindows()
                  for (ex,ey,ew,eh) in eyes:
           
                       cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,127,255),2)
+   ```
    
    - Display the camera screen as output
-      
+   
+   ```python
           cv2.imshow('img',img)
-          
+   ```
+   
+   
    - Last and the final step is to break the loop by pressing the **Esc** button
    
+   ```python
           k=cv2.waitKey(30) & 0xff
         
             if k=27;
           
               break:
         
+  ```
