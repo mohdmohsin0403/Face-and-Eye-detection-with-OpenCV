@@ -1,4 +1,4 @@
-# Face-and-Eye-detection-with-OpenCV
+# Face-and-Eye-detection
 
 In this session,
 - We will see what is Haar classifier.
