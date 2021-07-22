@@ -18,14 +18,14 @@ So briefly , Haar Classifier may be a classifier which is employed to detect the
 
 Before adding face and eye detection on the Haar Cascade files we need to import *OpenCV library*.
 
-### To install OpenCV library on *anaconda prompt* execute the following commands:
+### To install OpenCV library on *anaconda prompt* we have to execute the following commands:
 
 ```python
 pip install opencv-python
 pip install opencv-contrib-python
 ```
 
-## REQUIREMENTS
+## The REQUIREMENTS
 
   - Webcam system
   
@@ -33,7 +33,7 @@ pip install opencv-contrib-python
   
   - Python-OpenCV
 
-### Code
+### Code for the following-
 
 ```python
    
